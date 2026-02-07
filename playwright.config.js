@@ -8,7 +8,7 @@ module.exports = defineConfig({
         headless: true, // change to false if you want to see execution
         viewport: { width: 1366, height: 768 },
         actionTimeout: 15000,
-        slowMo: 5000,
+        slowMo: 2000,
 
         screenshot: "only-on-failure",
         video: "retain-on-failure",
