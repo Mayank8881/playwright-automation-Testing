@@ -100,6 +100,18 @@ Page Object:
 
 ---
 
+#### ✅ Action 3: My Info Page Verification
+
+Steps:
+-Click on My Info tab
+-Assert that:
+    "Personal Details" section header is visible
+
+Page Object:
+- `pages/MyInfoPage.js`
+
+---
+
 Test File:
 - `tests/dashboardActions.spec.js`
 
@@ -119,8 +131,13 @@ npm -v
 ```bash
 npm install
 ```
+### 3. Install Playwright
 
-### 3. Install Playwright Browsers
+```bash
+npm install -D @playwright/test
+```
+
+### 4. Install Playwright Browsers
 
 ```bash
 npx playwright install
@@ -163,8 +180,6 @@ npx playwright show-report
 ## 🏆 Bonus Features Implemented
 
 * Screenshot capture on failure
-* Video recording on failure
-* Trace generation on failure
 * HTML report generation
 
 ---
@@ -178,14 +193,4 @@ npx playwright show-report
 
 ## 👨‍💻 Author
 
-Automation created for assignment purpose using Playwright.
-
-```
-
----
-
-If you want, I can also generate:
-✅ `.gitignore` file  
-✅ `package.json` scripts (`npm run test:headed`, `npm run test:report`)  
-so your submission looks even more professional.
-```
+Mayank Mokhere
