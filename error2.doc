@@ -1,0 +1,63 @@
+>> C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation>
+
+Running 2 tests using 2 workers
+
+  ✓  1 tests\login.spec.js:7:5 › OrangeHRM Login Test › Login should be successful (27.6s)       
+  ✘  2 …5 › OrangeHRM Dashboard Actions › Perform Admin + My Info actions with assertions (35.3s)
+
+                                                                                                  1) tests\dashboardActions.spec.js:21:5 › OrangeHRM Dashboard Actions › Perform Admin + My Info  actions with assertions
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('h6.oxd-text--h6')
+    Expected: visible
+    Error: strict mode violation: locator('h6.oxd-text--h6') resolved to 4 elements:
+        1) <h6 data-v-7b563373="" data-v-c286b6e5="" class="oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module">PIM</h6> aka getByRole('heading', { name: 'PIM' })
+        2) <h6 data-v-7b563373="" data-v-af86f9aa="" class="oxd-text oxd-text--h6 --strong"></h6> aka getByRole('heading').filter({ hasText: /^$/ })
+        3) <h6 data-v-7b563373="" data-v-6653c066="" class="oxd-text oxd-text--h6 orangehrm-main-title">Personal Details</h6> aka getByRole('heading', { name: 'Personal Details' })
+        4) <h6 data-v-7b563373="" data-v-3dab643a="" class="oxd-text oxd-text--h6 orangehrm-main-title">Attachments</h6> aka getByRole('heading', { name: 'Attachments' })
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('h6.oxd-text--h6')
+
+
+       at ..\pages\MyInfoPage.js:22
+
+      20 |
+      21 |         // Assertion: heading should be visible (usually "PIM" / "My Info")
+    > 22 |         await expect(this.pageHeading).toBeVisible();
+         |                                        ^
+      23 |     }
+      24 | }
+      25 |
+        at MyInfoPage.assertMyInfoLoaded (C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation\pages\MyInfoPage.js:22:40)
+        at C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation\tests\dashboardActions.spec.js:31:9
+
+    attachment #1: screenshot (image/png) ───────────────────────────────────────────────────────
+    test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\test-failed-1.png  
+    ─────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ───────────────────────────────────────────────────────────
+    test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\video.webm
+    ─────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\error-context.md
+
+    attachment #4: trace (application/zip) ──────────────────────────────────────────────────────
+    test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\trace.zip
+
+    ─────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\dashboardActions.spec.js:21:5 › OrangeHRM Dashboard Actions › Perform Admin + My Info actions with assertions
+  1 passed (39.7s)
+
+To open last HTML report run:
+
+  npx playwright show-report
+
+PS C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation> 

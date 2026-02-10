@@ -1,0 +1,62 @@
+PS C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation> npx playwright test --headed
+>>
+
+Running 2 tests using 2 workers
+
+  ✓  1 tests\login.spec.js:7:5 › OrangeHRM Login Test › Login should be successful (36.3s)
+  ✘  2 tests\dashboardActions.spec.js:22:5 › OrangeHRM Dashboard Actions › Perform Admin + My Info actions with assertions (41.0s)
+
+
+  1) tests\dashboardActions.spec.js:22:5 › OrangeHRM Dashboard Actions › Perform Admin + My Info actions with assertions
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /viewPersonalDetails\/empNumber\/\d+/
+    Received string:  "https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        8 × unexpected value "https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee"
+        - waiting for" https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/237" navigation to finish...
+
+
+       at ..\pages\PimAddEmployeePage.js:55
+
+      53 |
+      54 |     async assertEmployeeCreated() {
+    > 55 |         await expect(this.page).toHaveURL(/viewPersonalDetails\/empNumber\/\d+/);
+         |                                 ^
+      56 |         await expect(this.personalDetailsHeading).toBeVisible({ timeout: 20000 });
+      57 |     }
+      58 | }
+        at PimAddEmployeePage.assertEmployeeCreated (C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation\pages\PimAddEmployeePage.js:55:33)
+        at C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation\tests\dashboardActions.spec.js:30:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\dashboardActions-OrangeHRM-4dfc4-nfo-actions-with-assertions\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\dashboardActions.spec.js:22:5 › OrangeHRM Dashboard Actions › Perform Admin + My Info actions with assertions
+  1 passed (45.5s)
+
+To open last HTML report run:
+
+  npx playwright show-report
+
+PS C:\Users\mayank.mokhere\Documents\Assignents\Testing\playwright-automation> 
