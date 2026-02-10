@@ -4,10 +4,10 @@
 This project automates the OrangeHRM demo website using Playwright (JavaScript).  
 It covers the complete login flow and performs dashboard actions after login with proper assertions, explicit waits, and clean reusable page object structure.
 
-Demo Site:
+Demo Site :
 https://opensource-demo.orangehrmlive.com/
 
-Demo Video:
+Demo Video :
 https://drive.google.com/file/d/1MGsTZOPBPW0cdnIQqz1WWDKhsoN7iprv/view?usp=sharing
 
 ---
