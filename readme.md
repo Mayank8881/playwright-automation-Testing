@@ -7,6 +7,9 @@ It covers the complete login flow and performs dashboard actions after login wit
 Demo Site:
 https://opensource-demo.orangehrmlive.com/
 
+Demo Video:
+https://drive.google.com/file/d/1MGsTZOPBPW0cdnIQqz1WWDKhsoN7iprv/view?usp=sharing
+
 ---
 
 ## 🧰 Tools and Language Used
